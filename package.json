@@ -1,0 +1,9 @@
+{
+    "name": "prettify-paragraphs", 
+    "license": "MPL 2.0", 
+    "author": "Frederic de Zorzi", 
+    "version": "2.1", 
+    "fullName": "Prettify paragraphs", 
+    "id": "fredz@pimentech.fr", 
+    "description": "Activate full justification and hyphenation on all web-pages paragraphs for better readability."
+}
