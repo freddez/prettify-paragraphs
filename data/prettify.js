@@ -1,6 +1,6 @@
 function prettifyText(str, lang) {
     //str = str.replace(/(\s*)\.\.\./g,"… ");
-    str = str.replace(/(\s*)([,\.])(\s*)([^0-9])/g,"$2 $4");
+    //str = str.replace(/(\s*)([,\.])(\s*)([^0-9])/g,"$2 $4");
     if (lang == 'fr') {
         str = str.replace(/(\s*)([;:\?\!\u00BB])(\s*)/g,"\u202F$2 ");
     }
@@ -29,14 +29,14 @@ function recursiveWalk(doc, node) {
                 for (var i=0;i<txts.length;i++) {
                     if (i < txts.length-1) {
                         tmpNode.appendChild(doc.createTextNode(txts[i]+ '-'));
-                        tmpNode.appendChild(doc.createElement("wbr")); 
+                        tmpNode.appendChild(doc.createElement("wbr"));
                     }
                     else {
                         tmpNode.appendChild(doc.createTextNode(txts[i]));
                     }
                 }
                 replaceNodeByChilds(node, tmpNode);
-            } 
+            }
             else if (node.nodeType == 1) {
                 recursiveWalk(doc, node);
             }
